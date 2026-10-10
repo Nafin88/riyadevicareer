@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "web-development",
+    "title": "Web Development",
+    "visual": "browser",
+    "tagline": "Fast, scalable websites and web platforms built around your business goals.",
+    "problem": "Outdated, slow or hard-to-manage websites quietly lose leads and credibility every day.",
+    "solution": "We design and engineer modern, SEO-ready web platforms with clean architecture, a content workflow your team can own, and performance that holds up under real traffic.",
+    "features": ["Custom corporate sites and web apps", "Headless CMS and API integrations", "SEO, accessibility and Core Web Vitals tuning", "E-commerce and payment integrations", "Secure, scalable cloud deployment"],
+    "useCases": ["Corporate and brand websites", "Booking and appointment platforms", "E-commerce storefronts", "Customer and partner portals"],
+    "stack": ["React", "Next.js", "Node.js", "MongoDB", "MySQL", "WordPress"],
+    "process": ["Discovery and sitemap", "UX and visual design", "Development sprints", "QA and performance testing", "Launch and monitoring"]
+  },
+  {
+    "slug": "app-development",
+    "title": "App Development",
+    "visual": "phone",
+    "tagline": "Mobile and cross-platform apps people actually enjoy using.",
+    "problem": "Great ideas stall when apps are slow, confusing or too expensive to maintain across platforms.",
+    "solution": "We build polished iOS and Android apps with shared codebases where it makes sense, robust back ends and release pipelines that keep shipping safe.",
+    "features": ["Cross-platform apps with React Native", "Offline-first and push notifications", "Secure authentication and payments", "Analytics and crash monitoring", "App-store release support"],
+    "useCases": ["Healthcare and wellness apps", "On-demand and booking apps", "Internal workforce tools", "Consumer subscription apps"],
+    "stack": ["React Native", "Node.js", "MongoDB", "Firebase", "REST and GraphQL"],
+    "process": ["Product discovery", "Prototype and UX flows", "Iterative build", "Beta testing", "Store launch and support"]
+  },
+  {
+    "slug": "digital-marketing",
+    "title": "Digital Marketing",
+    "visual": "growth",
+    "tagline": "Measurable growth through search, social and conversion-focused campaigns.",
+    "problem": "Traffic without strategy or tracking burns budget and hides what is actually working.",
+    "solution": "We connect SEO, content, paid media and analytics into one funnel, then keep optimizing against real lead and revenue data.",
+    "features": ["SEO and content strategy", "Google and social ad management", "Landing pages and CRO", "Analytics and lead tracking", "Monthly performance reporting"],
+    "useCases": ["Local and regional lead generation", "Product launches", "E-commerce growth", "Brand awareness campaigns"],
+    "stack": ["Google Analytics", "Search Console", "Meta Ads", "Google Ads", "Tag Manager"],
+    "process": ["Audit and goals", "Channel strategy", "Campaign setup", "Optimization cycles", "Reporting and scaling"]
+  },
+  {
+    "slug": "ar-vr",
+    "title": "AR / VR",
+    "visual": "immersive",
+    "tagline": "Immersive experiences that let customers see, explore and feel your product.",
+    "problem": "Complex products and spaces are hard to explain with flat images and brochures.",
+    "solution": "We craft AR try-ons, virtual showrooms and training simulations that run on phones, headsets and the web.",
+    "features": ["WebAR and mobile AR experiences", "Virtual showrooms and walkthroughs", "VR training simulations", "Interactive product configurators", "Unity and WebXR delivery"],
+    "useCases": ["Real estate walkthroughs", "Retail product try-on", "Industrial and medical training", "Events and exhibitions"],
+    "stack": ["Unity", "WebXR", "Three.js", "Blender", "8th Wall"],
+    "process": ["Concept and scoping", "3D asset pipeline", "Interaction design", "Device testing", "Deployment"]
+  },
+  {
+    "slug": "3d-modeling",
+    "title": "3D Modeling",
+    "visual": "model",
+    "tagline": "Production-ready 3D models, renders and animations for web, product and media.",
+    "problem": "Heavy or inconsistent 3D assets slow down websites and weaken product storytelling.",
+    "solution": "We model, texture and optimize assets for the target platform, from photoreal renders to lightweight real-time models.",
+    "features": ["Product and architectural modeling", "PBR texturing and lighting", "Real-time optimized GLB assets", "Animated product explainers", "Rigging and motion"],
+    "useCases": ["Product visualization", "Architecture previews", "Game and AR assets", "Marketing animations"],
+    "stack": ["Blender", "Three.js", "Spline", "glTF / GLB", "Substance"],
+    "process": ["Reference gathering", "Blockout and modeling", "Texturing and lighting", "Optimization", "Export and integration"]
+  },
+  {
+    "slug": "ui-ux-design",
+    "title": "UI/UX Design",
+    "visual": "interface",
+    "tagline": "Research-led interfaces that are clear, beautiful and built to convert.",
+    "problem": "Confusing journeys and inconsistent visuals make users leave before they convert.",
+    "solution": "We map user journeys, prototype quickly and deliver design systems that developers can implement without guesswork.",
+    "features": ["User research and journey mapping", "Wireframes and clickable prototypes", "Design systems and component libraries", "Usability testing", "Developer-ready handoff"],
+    "useCases": ["SaaS dashboards", "Redesigns of legacy products", "Mobile app interfaces", "Marketing site design"],
+    "stack": ["Figma", "Design tokens", "Storybook", "Motion", "Accessibility audits"],
+    "process": ["Research", "Information architecture", "Wireframes", "Visual design", "Test and handoff"]
+  }
+]
