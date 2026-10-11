@@ -11,7 +11,12 @@ const app = express();
 app.set("trust proxy", 1);
 app.use(helmet());
 const origins = (process.env.CORS_ORIGINS || "http://localhost:3000").split(",").map((s) => s.trim());
-app.use(cors({ origin: origins, credentials: true }));
+// In development, accept any localhost / 127.0.0.1 port so a changed Next.js port never breaks the API.
+const isLocal = (o) => /^https?:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(o || "");
+app.use(cors({
+  origin: (origin, cb) => cb(null, !origin || origins.includes("*") || origins.includes(origin) || (process.env.NODE_ENV !== "production" && isLocal(origin))),
+  credentials: true,
+}));
 app.use(express.json({ limit: "200kb" }));
 app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 
