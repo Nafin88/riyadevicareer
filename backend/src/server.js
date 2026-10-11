@@ -21,7 +21,7 @@ app.use(express.json({ limit: "200kb" }));
 app.use(morgan(process.env.NODE_ENV === "production" ? "combined" : "dev"));
 
 app.get("/", (_req, res) => res.json({ name: "Riyadvi API", status: "ok" }));
-app.get("/api/health", (_req, res) => res.json({ success: true, db: mongoose.connection.readyState === 1 ? "connected" : "disconnected" }));
+app.get("/api/health", (_req, res) => res.json({ success: true, db: !process.env.MONGODB_URI ? "local-file" : mongoose.connection.readyState === 1 ? "connected" : "disconnected" }));
 
 const submitLimiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 30, standardHeaders: true, legacyHeaders: false, message: { success: false, message: "Too many requests, please try again later." } });
 app.use("/api", submitLimiter, require("./routes/public"));
@@ -45,7 +45,7 @@ async function start() {
       console.error("MongoDB connection failed:", e.message);
     }
   } else {
-    console.warn("MONGODB_URI not set - API will start but database writes will fail.");
+    console.warn("MONGODB_URI not set - using local JSON file storage in backend/data (development only).");
   }
   app.listen(PORT, () => console.log(`Riyadvi API listening on :${PORT}`));
 }

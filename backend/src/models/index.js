@@ -72,4 +72,18 @@ const Application = mongoose.model(
   )
 );
 
-module.exports = { Enquiry, HealthCheckup, LeadMagnet, Application, STATUS };
+// No MONGODB_URI => fall back to a JSON-file store (local development / demos only).
+const useFile = !process.env.MONGODB_URI;
+if (useFile) {
+  const { createLocalModel } = require("../utils/localStore");
+  module.exports = {
+    Enquiry: createLocalModel("enquiries", { type: "contact", status: "new" }),
+    HealthCheckup: createLocalModel("healthcheckups", { status: "new" }),
+    LeadMagnet: createLocalModel("leadmagnets", { resource: "software-project-planning-guide", status: "new" }),
+    Application: createLocalModel("applications", { status: "new" }),
+    STATUS,
+    useFile,
+  };
+} else {
+  module.exports = { Enquiry, HealthCheckup, LeadMagnet, Application, STATUS, useFile };
+}
