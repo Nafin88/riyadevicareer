@@ -19,7 +19,8 @@ export default function Scene3D({ Scene, fallback, className = "", margin = "200
   const showScene = quality && quality !== "static" && seen.current;
 
   return (
-    <div ref={ref} className={`relative ${className}`}>
+    // Only default to `relative` when the caller hasn't chosen a position (else the classes fight and the box collapses).
+    <div ref={ref} className={`${/\b(absolute|fixed|relative|sticky)\b/.test(className) ? "" : "relative"} ${className}`}>
       {showScene ? <Scene quality={quality} active={near} {...props} /> : fallback}
     </div>
   );

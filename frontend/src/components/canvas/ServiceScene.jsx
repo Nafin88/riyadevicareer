@@ -103,7 +103,7 @@ function Model({ quality }) {
   return (
     <mesh>
       <torusKnotGeometry args={[0.85, 0.3, quality === "lite" ? 120 : 260, quality === "lite" ? 16 : 40]} />
-      <meshStandardMaterial color={GOLD} metalness={1} roughness={0.15} envMapIntensity={1.5} />
+      <meshStandardMaterial color={GOLD} metalness={0.85} roughness={0.28} envMapIntensity={1.2} emissive="#5a4208" emissiveIntensity={0.6} />
     </mesh>
   );
 }
@@ -151,6 +151,9 @@ export default function ServiceScene({ kind = "browser", quality, active, classN
       <Environment resolution={64} frames={1}>
         <Lightformer form="rect" intensity={4} position={[0, 3, 3]} scale={[6, 2, 1]} />
         <Lightformer form="rect" intensity={2} position={[-4, 0, 2]} scale={[2, 5, 1]} color="#ffd978" />
+        {/* warm fill so metal surfaces never reflect pure black */}
+        <Lightformer form="rect" intensity={1.4} position={[0, 0, -6]} scale={[24, 12, 1]} color="#a3822a" />
+        <Lightformer form="rect" intensity={1.2} position={[0, -4, 2]} scale={[12, 2, 1]} color="#c9a43a" />
       </Environment>
       {draggable ? (
         <>

@@ -65,7 +65,7 @@ function Ecosystem({ quality, pointer }) {
     <group ref={group}>
       <mesh ref={core}>
         <icosahedronGeometry args={[1.25, quality === "lite" ? 3 : 5]} />
-        <MeshDistortMaterial color={GOLD} metalness={1} roughness={0.18} distort={0.28} speed={1.6} envMapIntensity={1.4} />
+        <MeshDistortMaterial color={GOLD} metalness={0.85} roughness={0.32} distort={0.28} speed={1.6} envMapIntensity={1.1} emissive="#5a4208" emissiveIntensity={0.7} />
       </mesh>
       <mesh scale={1.9}>
         <icosahedronGeometry args={[1, 1]} />
@@ -131,6 +131,9 @@ export default function HeroScene({ quality, active }) {
         <Lightformer form="rect" intensity={4} position={[0, 4, 3]} scale={[8, 2, 1]} />
         <Lightformer form="rect" intensity={2.5} position={[-5, 0, 2]} scale={[2, 6, 1]} color="#ffd978" />
         <Lightformer form="ring" intensity={3} position={[4, -2, -3]} scale={4} color="#fff" />
+        {/* soft warm fill all around so the metal never reflects pure black */}
+        <Lightformer form="rect" intensity={1.4} position={[0, 0, -6]} scale={[24, 12, 1]} color="#a3822a" />
+        <Lightformer form="rect" intensity={1.2} position={[0, -4, 2]} scale={[12, 2, 1]} color="#c9a43a" />
       </Environment>
       <Ecosystem quality={quality} pointer={pointer} />
       <Particles quality={quality} />
