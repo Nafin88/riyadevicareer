@@ -11,6 +11,14 @@ A multi-page, dynamic corporate website with a 3D interactive experience, a Node
 | Backend API (Render/Railway) | _add after deploying_ |
 | Admin dashboard | `<frontend-url>/admin` |
 
+## Quick start (Windows)
+
+1. Install Node.js 20 or newer from nodejs.org.
+2. Double-click `install.bat` (installs both apps), then double-click `start.bat`.
+3. Open http://localhost:3000. Admin: http://localhost:3000/admin (`admin@example.com` / `admin123`).
+
+The included `backend/.env` and `frontend/.env.local` are ready to run. With `MONGODB_URI` empty the API stores data in `backend/data` (development only). For production, set `MONGODB_URI` to a MongoDB Atlas connection string and change the admin password and `JWT_SECRET`.
+
 ## Features
 
 - **Homepage:** interactive 3D hero (connected-node ecosystem reacting to cursor, scroll and device tilt), GSAP-pinned "Challenge → Growth" story, shared 3D service stage, orbiting technology constellation, scroll-filled company timeline, Business Health Checkup teaser, end-to-end journey, featured portfolio.
