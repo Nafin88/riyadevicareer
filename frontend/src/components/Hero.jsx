@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import { Fragment } from "react";
 import { motion } from "motion/react";
 import { HeroVisual } from "./visuals";
 
@@ -20,7 +21,9 @@ export default function Hero() {
 
         <h1 className="max-w-3xl text-[2.6rem] font-semibold leading-[1.08] sm:text-6xl lg:text-7xl">
           {words.map((w, i) => (
-            <motion.span key={i} initial={{ opacity: 0, y: 40, filter: "blur(8px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ delay: 0.15 + i * 0.06, duration: 0.7, ease: [0.22, 1, 0.36, 1] }} className={`mr-[0.25em] inline-block ${i >= 6 ? "gold-text" : ""}`}>{w}</motion.span>
+            <Fragment key={i}>
+              <motion.span initial={{ opacity: 0, y: 40, filter: "blur(8px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ delay: 0.15 + i * 0.06, duration: 0.7, ease: [0.22, 1, 0.36, 1] }} className={`inline-block ${i >= 6 ? "gold-text" : ""}`}>{w}</motion.span>{" "}
+            </Fragment>
           ))}
         </h1>
 
