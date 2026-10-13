@@ -159,3 +159,5 @@ _Add other tools you actually use (e.g. Cursor/Copilot for refactors, Midjourney
 ## Future improvements
 
 Headless CMS (Sanity/Strapi) for content, S3 for uploads, Playwright + API tests, GLB models authored in Blender, Draco/KTX2 compression, richer case-study scroll-stories, i18n, CRM/webhook integrations, role-based admin, rate-limit store in Redis, Lighthouse CI.
+#   r i y a d e v i c a r e e r  
+ 
