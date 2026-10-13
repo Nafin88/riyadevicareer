@@ -24,7 +24,7 @@ function HeroFallback() {
 function ServiceFallback({ title }) {
   return (
     <div className="absolute inset-0 grid place-items-center" aria-hidden>
-      <div className="grid h-24 w-24 place-items-center rounded-2xl border border-gold/30 bg-gradient-to-br from-gold/20 to-transparent font-display text-3xl font-semibold text-gold">{title?.[0] ?? "R"}</div>
+      <div className="grid h-24 w-24 place-items-center rounded-2xl border border-gold/30 bg-linear-to-br from-gold/20 to-transparent font-display text-3xl font-semibold text-gold">{title?.[0] ?? "R"}</div>
     </div>
   );
 }

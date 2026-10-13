@@ -11,8 +11,8 @@ export default function Timeline() {
   const scaleY = useSpring(scrollYProgress, { stiffness: 90, damping: 24 });
   return (
     <div ref={ref} className="relative mx-auto max-w-3xl pl-8 md:pl-0">
-      <div className="absolute bottom-0 left-[11px] top-0 w-px bg-white/10 md:left-1/2" aria-hidden />
-      <motion.div style={{ scaleY, transformOrigin: "top" }} className="absolute bottom-0 left-[11px] top-0 w-px bg-gradient-to-b from-gold-light to-gold-dark md:left-1/2" aria-hidden />
+      <div className="absolute bottom-0 left-2.75 top-0 w-px bg-white/10 md:left-1/2" aria-hidden />
+      <motion.div style={{ scaleY, transformOrigin: "top" }} className="absolute bottom-0 left-2.75 top-0 w-px bg-linear-to-b from-gold-light to-gold-dark md:left-1/2" aria-hidden />
       <ol className="space-y-12">
         {MILESTONES.map((m, i) => (
           <li key={m.year} className="relative md:grid md:grid-cols-2 md:gap-14">

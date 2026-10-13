@@ -25,7 +25,7 @@ export function PageHero({ eyebrow, title, children, actions }) {
   return (
     <section className="relative overflow-hidden pb-14 pt-32 md:pb-20 md:pt-44">
       <div className="grid-bg absolute inset-0 opacity-70" aria-hidden />
-      <div className="glow-orb -top-24 left-1/2 h-72 w-[36rem] -translate-x-1/2 bg-gold/20" aria-hidden />
+      <div className="glow-orb -top-24 left-1/2 h-72 w-144 -translate-x-1/2 bg-gold/20" aria-hidden />
       <div className="container-x relative">
         {eyebrow && <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-gold">{eyebrow}</motion.p>}
         <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} className="max-w-4xl text-4xl font-semibold leading-[1.1] md:text-6xl">{title}</motion.h1>

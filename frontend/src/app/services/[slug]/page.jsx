@@ -89,7 +89,7 @@ export default async function ServicePage({ params }) {
 
       <section className="container-x pt-20">
         <p className="mb-4 text-sm text-muted">Explore other services</p>
-        <div className="flex flex-wrap gap-2">{others.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} className="btn btn-ghost !py-2 text-sm">{s.title}</Link>)}</div>
+        <div className="flex flex-wrap gap-2">{others.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} className="btn btn-ghost py-2! text-sm">{s.title}</Link>)}</div>
       </section>
 
       <CTABand title={`Ready to start with ${service.title}?`} primary={{ href: `/contact?intent=quote&service=${service.slug}`, label: "Get a Quote" }} />

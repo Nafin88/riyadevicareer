@@ -5,7 +5,7 @@ import { useState } from "react";
 function Select({ label, value, onChange, options }) {
   return (
     <label className="block text-xs text-zinc-400">{label}
-      <select className="field mt-1 !py-2" value={value} onChange={(e) => onChange(e.target.value)}>
+      <select className="field mt-1 py-2!" value={value} onChange={(e) => onChange(e.target.value)}>
         <option value="">All</option>{options.map((o) => <option key={o}>{o}</option>)}
       </select>
     </label>

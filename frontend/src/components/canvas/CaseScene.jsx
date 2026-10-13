@@ -27,7 +27,7 @@ function Planet({ r, size, speed, color, offset }) {
 
 export default function CaseScene({ quality, active }) {
   return (
-    <Canvas className="!absolute inset-0 cursor-grab active:cursor-grabbing" frameloop={active ? "always" : "never"} dpr={quality === "lite" ? 1 : [1, 1.5]} camera={{ position: [0, 3.5, 7.5], fov: 45 }} gl={{ antialias: quality === "full", alpha: true }}>
+    <Canvas className="absolute! inset-0 cursor-grab active:cursor-grabbing" frameloop={active ? "always" : "never"} dpr={quality === "lite" ? 1 : [1, 1.5]} camera={{ position: [0, 3.5, 7.5], fov: 45 }} gl={{ antialias: quality === "full", alpha: true }}>
       <ambientLight intensity={0.4} />
       <pointLight position={[0, 0, 0]} intensity={60} color="#ffd978" />
       <Environment resolution={64} frames={1}>

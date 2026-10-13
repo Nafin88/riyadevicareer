@@ -73,7 +73,7 @@ export default function Transformation() {
           </ol>
         </div>
 
-        <div className="glass relative aspect-[4/3] rounded-3xl p-4">
+        <div className="glass relative aspect-4/3 rounded-3xl p-4">
           <svg viewBox="0 0 400 260" className="h-full w-full" role="img" aria-label="Growth path from business challenge to growth">
             <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stopColor="#9c7c1a" /><stop offset="1" stopColor="#f3dc85" /></linearGradient></defs>
             <path d={path} stroke="rgba(255,255,255,.12)" strokeWidth="2" fill="none" strokeDasharray="4 6" />

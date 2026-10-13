@@ -7,11 +7,11 @@ const words = ["Custom", "Software", "&", "Digital", "Solutions", "to", "Grow", 
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden pt-24">
+    <section className="relative isolate flex min-h-svh items-center overflow-hidden pt-24">
       <div className="grid-bg absolute inset-0 -z-20 opacity-60" aria-hidden />
-      <div className="glow-orb -z-10 left-[-10%] top-1/4 h-96 w-96 bg-gold/15" aria-hidden />
+      <div className="glow-orb -z-10 -left-[10%] top-1/4 h-96 w-96 bg-gold/15" aria-hidden />
       <HeroVisual className="absolute inset-0 -z-10 md:left-[22%]" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black via-black/60 to-transparent md:via-black/30" aria-hidden />
+      <div className="absolute inset-0 -z-10 bg-linear-to-r from-black via-black/60 to-transparent md:via-black/30" aria-hidden />
 
       <div className="container-x relative">
         <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs font-medium tracking-wide text-gold-light">

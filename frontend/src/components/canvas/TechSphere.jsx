@@ -47,7 +47,7 @@ function Constellation({ quality }) {
 export default function TechSphere({ quality, active }) {
   return (
     <Canvas
-      className="!absolute inset-0 cursor-grab active:cursor-grabbing"
+      className="absolute! inset-0 cursor-grab active:cursor-grabbing"
       frameloop={active ? "always" : "never"}
       dpr={quality === "lite" ? 1 : [1, 1.5]}
       camera={{ position: [0, 0, 8.5], fov: 45 }}

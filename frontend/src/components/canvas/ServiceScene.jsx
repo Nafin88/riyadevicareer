@@ -139,7 +139,7 @@ export default function ServiceScene({ kind = "browser", quality, active, classN
   const draggable = kind === "model";
   return (
     <Canvas
-      className={`!absolute inset-0 ${className}`}
+      className={`absolute! inset-0 ${className}`}
       frameloop={active ? "always" : "never"}
       dpr={quality === "lite" ? 1 : [1, 1.6]}
       camera={{ position: [0, 0, 6.2], fov: 40 }}

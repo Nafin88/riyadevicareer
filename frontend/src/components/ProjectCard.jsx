@@ -17,7 +17,7 @@ export default function ProjectCard({ project, priority = false }) {
     <Link href={`/portfolio/${project.slug}`} className="group block" aria-label={`${project.client} case study`}>
       <article ref={ref} onPointerMove={onMove} onPointerLeave={reset} className="glass relative h-full overflow-hidden rounded-3xl p-6 transition-transform duration-200 ease-out will-change-transform">
         <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100" style={{ background: `radial-gradient(400px circle at var(--mx,50%) var(--my,50%), ${project.accent}22, transparent 60%)` }} />
-        <div className="relative aspect-[16/10] overflow-hidden rounded-2xl" style={{ background: `linear-gradient(135deg, ${project.accent}55, #000 70%)` }}>
+        <div className="relative aspect-16/10 overflow-hidden rounded-2xl" style={{ background: `linear-gradient(135deg, ${project.accent}55, #000 70%)` }}>
           <div className="absolute inset-0 grid-bg opacity-60" />
           <span className="absolute bottom-3 left-4 font-display text-3xl font-semibold text-white/90">{project.client}</span>
           {project.interactive && <span className="absolute right-3 top-3 rounded-full bg-gold px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-black">Interactive 3D</span>}

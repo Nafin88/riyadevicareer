@@ -17,7 +17,7 @@ const links = [
 export function Logo() {
   return (
     <span className="flex items-center gap-2.5 font-display text-lg font-semibold tracking-tight">
-      <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-gold-light to-gold-dark text-sm font-bold text-black">R</span>
+      <span className="grid h-8 w-8 place-items-center rounded-lg bg-linear-to-br from-gold-light to-gold-dark text-sm font-bold text-black">R</span>
       <span>Riyadvi</span>
     </span>
   );
@@ -65,8 +65,8 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Link href="/business-health-checkup" className="btn btn-ghost !py-2.5 text-sm">Health Checkup</Link>
-          <Link href="/contact?intent=consultation" className="btn btn-gold !py-2.5 text-sm">Free Consultation</Link>
+          <Link href="/business-health-checkup" className="btn btn-ghost py-2.5! text-sm">Health Checkup</Link>
+          <Link href="/contact?intent=consultation" className="btn btn-gold py-2.5! text-sm">Free Consultation</Link>
         </div>
 
         <button className="grid h-11 w-11 place-items-center rounded-full border border-white/15 lg:hidden" onClick={() => setOpen((o) => !o)} aria-expanded={open} aria-label="Toggle menu">

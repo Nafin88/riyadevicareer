@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="md:col-span-2">
           <Logo />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">A technology and digital solutions partner combining technology, design, innovation and business thinking to help businesses grow. Since 2021.</p>
-          <Link href="/software-project-planning-guide" className="btn btn-ghost mt-6 !py-2.5 text-sm">Free Project Planning Guide</Link>
+          <Link href="/software-project-planning-guide" className="btn btn-ghost mt-6 py-2.5! text-sm">Free Project Planning Guide</Link>
         </div>
         <div>
           <h3 className="mb-4 text-sm font-semibold text-white">Services</h3>

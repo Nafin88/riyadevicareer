@@ -49,7 +49,7 @@ function Login({ onToken }) {
 const fmt = (d) => new Date(d).toLocaleString("en-IN", { dateStyle: "medium", timeStyle: "short" });
 
 function StatusSelect({ value, options, onChange }) {
-  return <select className="field !w-auto !py-1 text-xs" value={value} onChange={(e) => onChange(e.target.value)} aria-label="Status">{options.map((o) => <option key={o}>{o}</option>)}</select>;
+  return <select className="field w-auto! py-1! text-xs" value={value} onChange={(e) => onChange(e.target.value)} aria-label="Status">{options.map((o) => <option key={o}>{o}</option>)}</select>;
 }
 
 function Table({ token, tab, onAuthFail }) {
@@ -99,9 +99,9 @@ function Table({ token, tab, onAuthFail }) {
       {err && <p role="alert" className="mb-3 text-sm text-red-400">{err}</p>}
       {rows === null ? <p className="text-muted">Loading…</p> : rows.length === 0 ? <p className="py-10 text-center text-muted">No records yet.</p> : (
         <div className="overflow-x-auto rounded-2xl border border-white/10">
-          <table className="w-full min-w-[720px] text-left text-sm">
+          <table className="w-full min-w-180 text-left text-sm">
             <thead className="bg-white/5 text-xs uppercase tracking-wider text-zinc-400"><tr>{cols.map((c) => <th key={c} className="px-4 py-3 font-medium">{c}</th>)}</tr></thead>
-            <tbody className="divide-y divide-white/5">{rows.map((r) => <tr key={r._id} className="hover:bg-white/[0.03]">{cells(r).map((c, i) => <td key={i} className="px-4 py-3 align-top">{c}</td>)}</tr>)}</tbody>
+            <tbody className="divide-y divide-white/5">{rows.map((r) => <tr key={r._id} className="hover:bg-white/3">{cells(r).map((c, i) => <td key={i} className="px-4 py-3 align-top">{c}</td>)}</tr>)}</tbody>
           </table>
         </div>
       )}
@@ -129,7 +129,7 @@ export default function AdminPage() {
 
   return (
     <div className="min-h-screen">
-      <header className="flex items-center justify-between border-b border-white/10 px-5 py-4"><Logo /><button onClick={logout} className="btn btn-ghost !py-2 text-sm">Sign out</button></header>
+      <header className="flex items-center justify-between border-b border-white/10 px-5 py-4"><Logo /><button onClick={logout} className="btn btn-ghost py-2! text-sm">Sign out</button></header>
       <div className="mx-auto max-w-7xl px-5 py-8">
         <nav className="mb-8 flex flex-wrap gap-2" aria-label="Admin sections">
           {TABS.map((t) => <button key={t.id} onClick={() => setTab(t.id)} aria-current={tab === t.id} className={`rounded-full border px-4 py-2 text-sm ${tab === t.id ? "border-gold bg-gold/10 text-gold-light" : "border-white/15 text-zinc-300"}`}>{t.label}</button>)}

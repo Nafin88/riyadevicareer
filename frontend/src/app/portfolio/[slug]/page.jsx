@@ -25,7 +25,7 @@ export default async function CaseStudy({ params }) {
     <>
       <section className="relative overflow-hidden pb-12 pt-32 md:pt-40">
         <div className="grid-bg absolute inset-0 opacity-50" aria-hidden />
-        <div className="glow-orb left-1/2 top-0 h-72 w-[34rem] -translate-x-1/2 opacity-40" style={{ background: project.accent }} aria-hidden />
+        <div className="glow-orb left-1/2 top-0 h-72 w-136 -translate-x-1/2 opacity-40" style={{ background: project.accent }} aria-hidden />
         <div className="container-x relative">
           <Link href="/portfolio" className="text-sm text-muted hover:text-gold">← All projects</Link>
           <p className="mt-4 text-xs font-semibold uppercase tracking-[0.25em] text-gold">Case study · {project.industry}</p>
@@ -38,7 +38,7 @@ export default async function CaseStudy({ params }) {
         {project.interactive ? (
           <CaseVisual project={project} />
         ) : (
-          <div className="relative aspect-[16/8] overflow-hidden rounded-3xl border border-white/10" style={{ background: `linear-gradient(135deg, ${project.accent}66, #000 75%)` }}>
+          <div className="relative aspect-16/8 overflow-hidden rounded-3xl border border-white/10" style={{ background: `linear-gradient(135deg, ${project.accent}66, #000 75%)` }}>
             <div className="grid-bg absolute inset-0 opacity-60" />
             <span className="absolute bottom-6 left-6 font-display text-4xl font-semibold md:text-6xl">{project.client}</span>
           </div>
@@ -65,7 +65,7 @@ export default async function CaseStudy({ params }) {
 
       <section className="container-x pt-16">
         <h2 className="text-xl font-semibold">Related services</h2>
-        <div className="mt-4 flex flex-wrap gap-2">{related.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} className="btn btn-ghost !py-2 text-sm">{s.title}</Link>)}</div>
+        <div className="mt-4 flex flex-wrap gap-2">{related.map((s) => <Link key={s.slug} href={`/services/${s.slug}`} className="btn btn-ghost py-2! text-sm">{s.title}</Link>)}</div>
       </section>
 
       <section className="container-x pt-20">

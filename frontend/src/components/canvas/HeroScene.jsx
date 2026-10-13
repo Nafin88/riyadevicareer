@@ -116,7 +116,7 @@ export default function HeroScene({ quality, active }) {
   const [dpr, setDpr] = useState(quality === "lite" ? 1 : 1.75);
   return (
     <Canvas
-      className="!absolute inset-0"
+      className="absolute! inset-0"
       frameloop={active ? "always" : "never"}
       dpr={dpr}
       camera={{ position: [0, 0, 8], fov: 42 }}

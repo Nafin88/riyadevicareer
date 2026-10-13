@@ -29,13 +29,15 @@ const healthSchema = z.object({
 const leadSchema = z.object({ name, company: text(120), email, phone: z.string().trim().min(7, "Phone is required") });
 
 function scoreCheckup(d) {
+  // Sections are optional in the payload, so read them defensively.
+  const digital = d.digital || {}, marketing = d.marketing || {}, technology = d.technology || {};
   let s = 40;
-  if (d.digital.hasWebsite === "yes") s += 15;
-  if (d.digital.mobileFriendly === "yes") s += 10;
-  if (d.marketing.trackingLeads === "yes") s += 10;
-  s += Math.min(d.marketing.channels.length * 3, 12);
-  if (d.technology.automationLevel === "high") s += 8;
-  else if (d.technology.automationLevel === "medium") s += 4;
+  if (digital.hasWebsite === "yes") s += 15;
+  if (digital.mobileFriendly === "yes") s += 10;
+  if (marketing.trackingLeads === "yes") s += 10;
+  s += Math.min((marketing.channels || []).length * 3, 12);
+  if (technology.automationLevel === "high") s += 8;
+  else if (technology.automationLevel === "medium") s += 4;
   return Math.min(s, 100);
 }
 

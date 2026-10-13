@@ -71,7 +71,7 @@ export default function HealthCheckupForm() {
       <p className="mb-4 text-sm text-muted sm:hidden">Step {step + 1} of {STEPS.length}: {STEPS[step]}</p>
 
       <AnimatePresence mode="wait">
-        <motion.div key={step} initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.25 }} className="min-h-[18rem] space-y-4">
+        <motion.div key={step} initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -24 }} transition={{ duration: 0.25 }} className="min-h-72 space-y-4">
           {step === 0 && (<>
             <Field label="Business name" name="bn" required value={d.business.name} onChange={upd("business", "name")} error={err("business.name")} />
             <div className="grid gap-4 sm:grid-cols-2">
